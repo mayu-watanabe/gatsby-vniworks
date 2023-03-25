@@ -1,0 +1,31 @@
+//Here you can customize bootstrap
+$primary: #c6c6c6;
+@import "~bootstrap/scss/bootstrap";
+// @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Overpass+Mono:wght@300&display=swap');
+
+:root {
+  --bg-primary: #c6c6c6;
+  --nav-link-color-active: #ff530f;
+  --tx-color-title: #707070;
+  --tx-color-primary: #808080;
+}
+
+body {
+  background-color: var(--bg-primary);
+  font-family: 'Cutive Mono', monospace;
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--nav-link-color-active);
+}
+
+.color-title {
+  color: var(--tx-color-title);
+  font-family: 'Overpass Mono', monospace;
+}
+
+.color-text {
+  color: var(--tx-color-primary);
+}
+
