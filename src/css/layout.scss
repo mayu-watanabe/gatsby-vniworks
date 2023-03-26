@@ -1,7 +1,6 @@
 //Here you can customize bootstrap
 $primary: #c6c6c6;
 @import "~bootstrap/scss/bootstrap";
-// @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Overpass+Mono:wght@300&display=swap');
 
 :root {
@@ -16,6 +15,14 @@ body {
   font-family: 'Cutive Mono', monospace;
 }
 
+.nav {
+  position: fixed;
+}
+
+.nav-link {
+  padding: 0;
+}
+
 .navbar-nav .nav-link.active {
   color: var(--nav-link-color-active);
 }
@@ -28,4 +35,3 @@ body {
 .color-text {
   color: var(--tx-color-primary);
 }
-
