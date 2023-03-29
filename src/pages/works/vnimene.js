@@ -1,14 +1,14 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
-import Layout from "../components/layout"
-import {Seo} from "../components/seo"
+import Layout from "../../components/layout"
+import {Seo} from "../../components/seo"
 
 const SecondPage = () => (
   <Layout>
     <div className="container color-text">
       <StaticImage
-        src="../images/D85_7973.jpg"
+        src="../../images/D85_7973.jpg"
         layout="fullWidth"
         quality={95}
         formats={["AUTO", "WEBP"]}
@@ -39,7 +39,7 @@ const SecondPage = () => (
       </div>
       <div className="text-center pb-5">
         <StaticImage
-          src="../images/shirt_grey.png"
+          src="../../images/shirt_grey.png"
           // layout="fullWidth"
           width={600}
           quality={95}

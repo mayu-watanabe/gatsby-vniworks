@@ -23,21 +23,21 @@ const Navbar = ({ siteTitle }) => {
           <li className="nav-item">
             <ExactNavLink 
               fade
-              to="/vnospinari0"
+              to="/works/vnospinari0"
             >
               _vnospinari0
             </ExactNavLink>
           </li>
           <li className="nav-item">
             <ExactNavLink
-              to="/vnente"
+              to="/works/vnente"
             >
               _vnente
             </ExactNavLink>
           </li>
           <li className="nav-item">
             <ExactNavLink
-              to="/vnimene"
+              to="/works/vnimene"
             >
               _vnimene
             </ExactNavLink>
