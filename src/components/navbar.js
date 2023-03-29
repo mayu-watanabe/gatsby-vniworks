@@ -14,11 +14,11 @@ const ExactNavLink = props => (
 
 const Navbar = ({ siteTitle }) => {
   return (
-    <nav className="">
+    <nav className="nav">
       <div className="container-fluid py-3 ps-5">
-        <p><AniLink fade to="/" className="navbar-brand">{siteTitle}</AniLink></p>
+        <AniLink fade to="/" className="navbar-brand">{siteTitle}</AniLink>
         <p className="p-0 m-0">[ under construction ]</p>
-        <p className="p-0 m-0">--------------------------</p>
+        <p className="p-0 m-0">----------------------</p>
         <ul className="list-unstyled navbar-nav">
           <li className="nav-item">
             <ExactNavLink 

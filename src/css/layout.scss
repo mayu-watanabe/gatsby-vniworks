@@ -8,11 +8,16 @@ $primary: #c6c6c6;
   --nav-link-color-active: #ff530f;
   --tx-color-title: #707070;
   --tx-color-primary: #808080;
+  --bs-navbar-brand-color: #323232;
 }
 
 body {
   background-color: var(--bg-primary);
   font-family: 'Cutive Mono', monospace;
+}
+
+.container {
+  padding: 0 3rem;
 }
 
 .nav {
@@ -21,6 +26,10 @@ body {
 
 .nav-link {
   padding: 0;
+}
+
+a.nav-link {
+  color: var(--bs-navbar-brand-color);
 }
 
 .navbar-nav .nav-link.active {
@@ -34,4 +43,25 @@ body {
 
 .color-text {
   color: var(--tx-color-primary);
+}
+
+
+@media (max-width: 64rem) {
+  section {
+    min-height: 100vh;
+  }
+  .container {
+    padding: 0;
+
+    .page-text {
+      padding: 0 3rem;
+    }
+  }
+
+  .header-nav {
+    .nav {
+      font-size: 1.2rem;
+      margin-top: 3rem;
+    }
+  }
 }
