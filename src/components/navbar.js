@@ -9,20 +9,19 @@ const isActive = ({ isCurrent }) => {
 }
 
 const ExactNavLink = props => (
-  <AniLink fade getProps={isActive} {...props} />
+  <Link getProps={isActive} {...props} />
 )
 
 const Navbar = ({ siteTitle }) => {
   return (
     <nav className="nav">
-      <div className="container-fluid py-3 ps-5">
-        <AniLink fade to="/" className="navbar-brand">{siteTitle}</AniLink>
+      <div>
+        <Link fade to="/" className="navbar-brand">{siteTitle}</Link>
         <p className="p-0 m-0">[ under construction ]</p>
         <p className="p-0 m-0">----------------------</p>
         <ul className="list-unstyled navbar-nav">
           <li className="nav-item">
             <ExactNavLink 
-              fade
               to="/works/vnospinari0"
             >
               _vnospinari0
@@ -43,6 +42,7 @@ const Navbar = ({ siteTitle }) => {
             </ExactNavLink>
           </li>
         </ul>
+        <p className="p-0 m-0">----------------------</p>
       </div>
     </nav>
   )

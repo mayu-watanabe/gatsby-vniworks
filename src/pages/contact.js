@@ -1,17 +1,18 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import { Seo } from "../components/seo"
 
-const IndexPage = () => (
+const Contactage = () => (
   <Layout>
+    <div className="py-5">
+      <p>almrt@vni.works</p>
+    </div>
   </Layout>
 )
 
-export default IndexPage
+export default Contactage
 
 export const Head = () => (
-    <Seo />
+    <Seo title="contact"/>
 )

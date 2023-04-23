@@ -32,7 +32,7 @@ const Header = () => {
           <Hamburger toggled={isOpen} toggle={setOpen} />
       </div>
       
-      <style jsx>{`
+      <style jsx="true">{`
         .header-nav {
           display: ${isOpen ? 'inline' : 'none'};
           background-color: grey;

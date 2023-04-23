@@ -1,27 +1,39 @@
 //Here you can customize bootstrap
 $primary: #c6c6c6;
 @import "~bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Overpass+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
 
 :root {
   --bg-primary: #c6c6c6;
-  --nav-link-color-active: #ff530f;
+  --nav-link-color-active: #ffffff;
   --tx-color-title: #707070;
-  --tx-color-primary: #808080;
+  --tx-color-primary: #323232;
   --bs-navbar-brand-color: #323232;
 }
 
 body {
   background-color: var(--bg-primary);
-  font-family: 'Cutive Mono', monospace;
+  font-family: 'Baskervville', serif;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
 }
 
-.container {
-  padding: 0 3rem;
+.container-parent {
+  position: relative !important;
+  z-index: -20;
 }
 
-.nav {
-  position: fixed;
+.container-fluid {
+  width: 30vw!important;
+  height: 100vh;
+  overflow-y: scroll;
+  margin: auto 0!important;
+  -ms-overflow-style: none; // hide scroll for  IE(Internet Explorer)・Microsoft Edge
+  scrollbar-width: none; // hide scroll for Firefox
+}
+
+.container-fluid::-webkit-scrollbar{ // hide scroll for Google Chrome、Safari
+  display: none;
 }
 
 .nav-link {
@@ -38,24 +50,66 @@ a.nav-link {
 
 .color-title {
   color: var(--tx-color-title);
-  font-family: 'Overpass Mono', monospace;
 }
 
 .color-text {
   color: var(--tx-color-primary);
 }
 
+.slide-image {
+  position: fixed;
+  left: 0;
+  display: inline-block;
+  white-space: nowrap;
+  z-index: -10;
+  overflow-x: scroll;
+  -ms-overflow-style: none; // hide scroll for IE(Internet Explorer)・Microsoft Edge
+  scrollbar-width: none; // hide scroll for Firefox
+
+  .slide-empty-box {
+    height: 60vh!important;
+    width: 30vw!important;
+    display: inline-block;
+  }
+
+  img {
+    height: 60vh!important;
+    display: inline-block;
+    padding: 0 1.5rem!important;
+  }
+}
+
+.slide-image::-webkit-scrollbar{ // hide scroll for Google Chrome、Safari
+display: none;
+}
 
 @media (max-width: 64rem) {
   section {
     min-height: 100vh;
   }
-  .container {
-    padding: 0;
 
-    .page-text {
-      padding: 0 3rem;
+  .container-fluid {
+    width: 100vw!important;
+    padding: 1.5rem!important;
+  }
+
+  .slide-image {
+    position: initial;
+    padding: 1.5rem 0!important;
+
+    .slide-empty-box {
+      display: none;
     }
+  
+    img {
+      height: 40vh!important;
+      padding: 0 1rem!important;
+      width: auto;
+    }
+  }
+
+  .color-text {
+    padding-top: 0!important;
   }
 
   .header-nav {

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `vnin_izi0`,
-    description: `A simple bootstrap 5 and Sass starter for Gatsby. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@r-ichard`,
+    description: `vnin_izi0`,
+    author: `vnin_izi0`,
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -32,7 +32,7 @@ module.exports = {
         background_color: `#c6c6c6`,
         theme_color: `#c6c6c6`,
         display: `standalone`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-gatsby-cloud`,
