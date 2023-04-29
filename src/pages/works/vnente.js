@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../../components/layout"
 import { Seo } from "../../components/seo"
 
-const SecondPage = () => (
+const Page = () => (
   <Layout>
     <div className="slide-image-container">
       <div className="slide-image">
@@ -37,6 +37,7 @@ const SecondPage = () => (
     </div>
 
     <div className="color-text py-5">
+      <p className="color-title">[ _vnente ]</p>
       <p className="my-0">The shaping of an oval form through an empirical / alchemical approach .</p>
       <p className="my-0 pt-4">The experimenting while looking for the minimum balance of the base of the human figure , in movement , has led to the carving out of the negative egg and the subsequent cut of the two halves, relating to the anatomical detail of the arch of the foot .</p>
       <p className="my-0 pt-4">The gesture has led to the definition of a form that now seems to be calling to be handled , twisted within its irregular split axes , while interrupting the magnetic forces holding together the two halves .</p>
@@ -50,7 +51,7 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default Page
 
 export const Head = () => (
     <Seo title="_vnente" />

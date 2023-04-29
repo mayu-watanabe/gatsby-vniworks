@@ -22,15 +22,15 @@ const Layout = ({ children }) => {
     <div className="container-parent">
       <div className="container-fluid p-5">
         {/* <Header /> */}
-        <div>
+        {/* <div>
           <Navbar siteTitle={data.site.siteMetadata?.title || `Title`} />
-        </div>
+        </div> */}
         <div>
           {children}
         </div>
-        <div className="footer">
+        {/* <div className="footer">
           <Footer />
-        </div>
+        </div> */}
       </div>
     </div>
   )

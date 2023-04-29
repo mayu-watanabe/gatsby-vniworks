@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../../components/layout"
 import {Seo} from "../../components/seo"
 
-const SecondPage = () => (
+const Page = () => (
   <Layout>
     <div className="slide-image-container">
       <div className="slide-image">
@@ -25,6 +25,7 @@ const SecondPage = () => (
     </div>
 
     <div className="color-text py-5">
+      <p className="color-title">[ _vnospinari0 ]</p>
       <p className="my-0">a chain - begins / ends</p>
       <p className="my-0">a body as its closure</p>
       <p className="my-0">a bridge linking selves</p>
@@ -40,7 +41,7 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default Page
 
 export const Head = () => (
     <Seo title="_vnospinari0" />
