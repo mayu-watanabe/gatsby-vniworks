@@ -63,6 +63,12 @@ module.exports = {
               },
               //[cssProperty]: 'value',
             },
+            {
+              family: "Braille Normal",
+              urls: {
+                woff: `/src/fonts/BRAILLE1.woff`,
+              },
+            },
           ],
         },
         // formatAgents: {
