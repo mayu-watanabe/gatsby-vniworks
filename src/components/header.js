@@ -1,7 +1,14 @@
 import React, { useState } from "react"
 import { Squeeze as Hamburger } from 'hamburger-react'
-import { useStaticQuery, graphql } from "gatsby"
-import Navbar from "./navbar";
+import { useStaticQuery, graphql, Link } from "gatsby"
+
+const isActive = ({ isCurrent }) => {
+  return isCurrent ? { className: "nav-link active" } : {className: "nav-link"}
+}
+
+const ExactNavLink = props => (
+  <Link getProps={isActive} {...props} />
+)
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -23,10 +30,43 @@ const Header = () => {
   return (
     <>
       <div className="header-nav">
-        <Navbar siteTitle={data.site.siteMetadata?.title || `Title`} />
+        <nav className="nav">
+          <div>
+            <ul className="list-unstyled navbar-nav">
+              <li className="nav-item">
+                <ExactNavLink 
+                  to="/works/vnospinari0"
+                >
+                  _vnospinari0
+                </ExactNavLink>
+              </li>
+              <li className="nav-item">
+                <ExactNavLink
+                  to="/works/vnente"
+                >
+                  _vnente
+                </ExactNavLink>
+              </li>
+              <li className="nav-item">
+                <ExactNavLink
+                  to="/works/vnimene"
+                >
+                  _vnimene
+                </ExactNavLink>
+              </li>
+              <li className="nav-item pt-5">
+                <ExactNavLink
+                  to="/archives/vno_sito"
+                >
+                  vn0 _ sit0
+                </ExactNavLink>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
       <div
-          className="hamburger d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none"
+          className="hamburger"
           onClick={toggleHamburger}
         >
           <Hamburger toggled={isOpen} toggle={setOpen} />
@@ -34,13 +74,12 @@ const Header = () => {
       
       <style jsx="true">{`
         .header-nav {
+          position: fixed;
           display: ${isOpen ? 'inline' : 'none'};
-          background-color: grey;
+          background-color: rgba(0,0,0,0.7);
           height: 100%;
           width: 100vw;
-          position: absolute;
           z-index: 100;
-          animation: fadein 0.3s ease-in 0s forwards;
         }
 
         .hamburger {
@@ -49,15 +88,6 @@ const Header = () => {
           margin-right: 10px;
           right: 0;
           z-index: 150;
-        }
-
-        @keyframes fadein {
-          0%{
-            opacity: 0;
-          }
-          100%{
-            opacity: 1;
-          }
         }
       `}
       </style>

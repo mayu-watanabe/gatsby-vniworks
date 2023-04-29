@@ -8,7 +8,7 @@ $primary: #c6c6c6;
   --nav-link-color-active: #ffffff;
   --tx-color-title: #323232;
   --tx-color-primary: #707070;
-  --bs-navbar-brand-color: #323232;
+  --bs-navbar-brand-color: #ffffff8d;
 }
 
 body {
@@ -25,7 +25,9 @@ body {
 
 .container-fluid {
   width: 30vw!important;
-  height: 100vh;
+  min-height: 100vh;
+  padding-top: 5rem !important;
+  padding-bottom: 7rem !important;
   overflow-y: scroll;
   margin: auto 0!important;
   -ms-overflow-style: none; // hide scroll for  IE(Internet Explorer)・Microsoft Edge
@@ -57,6 +59,14 @@ a.nav-link {
 
 .color-text {
   color: var(--tx-color-primary);
+}
+
+.text-braille {
+  font-family: 'Braille Normal';
+}
+
+.nav {
+  padding: 5rem;
 }
 
 .slide-image {
@@ -125,8 +135,7 @@ display: none;
 
   .header-nav {
     .nav {
-      font-size: 1.2rem;
-      margin-top: 3rem;
+      padding: 3rem;
     }
   }
 }
