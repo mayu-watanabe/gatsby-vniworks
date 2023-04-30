@@ -7,7 +7,8 @@ const isActive = ({ isCurrent }) => {
 }
 
 const ExactNavLink = props => (
-  <Link getProps={isActive} {...props} />
+  // <Link getProps={isActive} {...props} />
+  <Link {...props} />
 )
 
 const Header = () => {
@@ -42,14 +43,16 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <ExactNavLink
-                  to="/works/vnente"
+                  // to="/works/vnente"
+                  to="/works/void"
                 >
                   _vnente
                 </ExactNavLink>
               </li>
               <li className="nav-item">
                 <ExactNavLink
-                  to="/works/vnimene"
+                  // to="/works/vnimene"
+                  to="/works/void"
                 >
                   _vnimene
                 </ExactNavLink>
