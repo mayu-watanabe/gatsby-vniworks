@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../../components/layout"
 import {Seo} from "../../components/seo"
 
-const SecondPage = () => (
+const Page = () => (
   <Layout>
     <div className="slide-image-container">
       <div className="slide-image">
@@ -37,12 +37,13 @@ const SecondPage = () => (
     </div>
 
     <div className="color-text py-5">
+      <p className="color-title">[ _vnimene ]</p>
       <p className="my-0">a membrane describing the first need for the daily ritual contact with one’s skin</p>
       <p className="my-0">the organic details embody a condition of liquid, hidden, intimate</p>
       <p className="my-0 pt-4">the study of a shirt that unfolds bi-dimensionally</p>
       <p className="my-0">tracing a continuous line on a single piece that favours the fold [curve] to the radical [straight] cut</p>
       <p className="my-0">an erfonomic romance</p>
-      <h5 className="color-title pt-5">vnimene [construction]</h5>
+      <p className="color-title pt-5">vnimene [construction]</p>
       <p className="my-0">volumes are altered to visualise , in three dimensions , the structures</p>
       <p className="my-0">that historically distinguish the shirt object</p>
       <p className="my-0">-re-engineered :</p>
@@ -60,7 +61,7 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default Page
 
 export const Head = () => (
     <Seo title="_vnimene" />

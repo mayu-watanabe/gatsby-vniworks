@@ -6,16 +6,20 @@ $primary: #c6c6c6;
 :root {
   --bg-primary: #c6c6c6;
   --nav-link-color-active: #ffffff;
-  --tx-color-title: #707070;
-  --tx-color-primary: #323232;
-  --bs-navbar-brand-color: #323232;
+  --tx-color-title: #323232;
+  --tx-color-primary: #707070;
+  --bs-navbar-brand-color: #ffffff8d;
 }
 
 body {
   background-color: var(--bg-primary);
-  font-family: 'Baskervville', serif;
-  font-size: 0.9rem;
-  line-height: 1.5rem;
+  font-family: 'Apercu Mono', 'Baskervville',  serif;
+  font-size: 10px;
+  line-height: 0.9rem;
+}
+
+a {
+  text-decoration: none!important;
 }
 
 .container-parent {
@@ -25,15 +29,26 @@ body {
 
 .container-fluid {
   width: 30vw!important;
-  height: 100vh;
+  min-height: 100vh;
+  padding-top: 5rem !important;
+  padding-bottom: 7rem !important;
   overflow-y: scroll;
   margin: auto 0!important;
   -ms-overflow-style: none; // hide scroll for  IE(Internet Explorer)・Microsoft Edge
   scrollbar-width: none; // hide scroll for Firefox
+
+  display: flex;
+  align-items: center;
 }
 
 .container-fluid::-webkit-scrollbar{ // hide scroll for Google Chrome、Safari
   display: none;
+}
+
+.nav {
+  position: absolute;
+  right: 0;
+  text-align: right;
 }
 
 .nav-link {
@@ -42,6 +57,15 @@ body {
 
 a.nav-link {
   color: var(--bs-navbar-brand-color);
+}
+
+.nav-button-top {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
 }
 
 .navbar-nav .nav-link.active {
@@ -56,9 +80,25 @@ a.nav-link {
   color: var(--tx-color-primary);
 }
 
+.text-braille {
+  font-family: 'Braille Normal';
+}
+
+.text-braille a {
+  color: unset;
+}
+
+.nav {
+  padding: 5rem;
+}
+
 .slide-image {
   position: fixed;
   left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   display: inline-block;
   white-space: nowrap;
   z-index: -10;
@@ -67,13 +107,13 @@ a.nav-link {
   scrollbar-width: none; // hide scroll for Firefox
 
   .slide-empty-box {
-    height: 60vh!important;
+    height: 40vh!important;
     width: 30vw!important;
     display: inline-block;
   }
 
   img {
-    height: 60vh!important;
+    height: 40vh!important;
     display: inline-block;
     padding: 0 1.5rem!important;
   }
@@ -89,13 +129,17 @@ display: none;
   }
 
   .container-fluid {
+    display: block;
     width: 100vw!important;
     padding: 1.5rem!important;
   }
 
   .slide-image {
     position: initial;
-    padding: 1.5rem 0!important;
+    padding: 4rem 0 2rem 0!important;
+    transform: none;
+    -webkit-transform: none;
+    -ms-transform: none;
 
     .slide-empty-box {
       display: none;
@@ -109,13 +153,12 @@ display: none;
   }
 
   .color-text {
-    padding-top: 0!important;
+    padding: 2rem 0!important;
   }
 
   .header-nav {
     .nav {
-      font-size: 1.2rem;
-      margin-top: 3rem;
+      padding: 3rem;
     }
   }
 }
