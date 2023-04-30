@@ -108,6 +108,7 @@ const Header = () => {
           -webkit-transform: translateX(-50%);
           -ms-transform: translateX(-50%);
           cursor: pointer;
+          z-index: 100;
         }
       `}
       </style>

@@ -32,17 +32,17 @@ a {
   min-height: 100vh;
   padding-top: 5rem !important;
   padding-bottom: 7rem !important;
-  overflow-y: scroll;
+  overflow-y: scroll!important;
   margin: auto 0!important;
-  -ms-overflow-style: none; // hide scroll for  IE(Internet Explorer)・Microsoft Edge
-  scrollbar-width: none; // hide scroll for Firefox
+  -ms-overflow-style: none!important; // hide scroll for  IE(Internet Explorer)・Microsoft Edge
+  scrollbar-width: none!important; // hide scroll for Firefox
 
   display: flex;
   align-items: center;
 }
 
 .container-fluid::-webkit-scrollbar{ // hide scroll for Google Chrome、Safari
-  display: none;
+  display: none!important;
 }
 
 .nav {
@@ -93,6 +93,7 @@ a.nav-link {
 }
 
 .slide-image {
+  height: 40vh!important;
   position: fixed;
   left: 0;
   top: 50%;
@@ -102,9 +103,9 @@ a.nav-link {
   display: inline-block;
   white-space: nowrap;
   z-index: -10;
-  overflow-x: scroll;
-  -ms-overflow-style: none; // hide scroll for IE(Internet Explorer)・Microsoft Edge
-  scrollbar-width: none; // hide scroll for Firefox
+  overflow-x: scroll!important;
+  -ms-overflow-style: none!important; // hide scroll for IE(Internet Explorer)・Microsoft Edge
+  scrollbar-width: none!important; // hide scroll for Firefox
 
   .slide-empty-box {
     height: 40vh!important;
@@ -114,13 +115,15 @@ a.nav-link {
 
   img {
     height: 40vh!important;
+    width: auto!important;
     display: inline-block;
     padding: 0 1.5rem!important;
+    object-fit: contain!important;
   }
 }
 
 .slide-image::-webkit-scrollbar{ // hide scroll for Google Chrome、Safari
-display: none;
+display: none!important;
 }
 
 @media (max-width: 64rem) {
@@ -135,20 +138,22 @@ display: none;
   }
 
   .slide-image {
-    position: initial;
-    padding: 4rem 0 2rem 0!important;
+    position: initial!important;
+    padding: 0!important;
+    margin: 4rem 0 2rem 0!important;
     transform: none;
     -webkit-transform: none;
     -ms-transform: none;
+    height: 40vh!important;
+    min-height: 40vh!important;
 
     .slide-empty-box {
       display: none;
     }
-  
+    
     img {
-      height: 40vh!important;
       padding: 0 1rem!important;
-      width: auto;
+      // width: auto;
     }
   }
 
