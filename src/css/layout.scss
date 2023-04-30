@@ -45,12 +45,27 @@ a {
   display: none;
 }
 
+.nav {
+  position: absolute;
+  right: 0;
+  text-align: right;
+}
+
 .nav-link {
   padding: 0;
 }
 
 a.nav-link {
   color: var(--bs-navbar-brand-color);
+}
+
+.nav-button-top {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
 }
 
 .navbar-nav .nav-link.active {
@@ -67,6 +82,10 @@ a.nav-link {
 
 .text-braille {
   font-family: 'Braille Normal';
+}
+
+.text-braille a {
+  color: unset;
 }
 
 .nav {

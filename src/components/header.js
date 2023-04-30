@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { Squeeze as Hamburger } from 'hamburger-react'
 import { useStaticQuery, graphql, Link } from "gatsby"
 
 const isActive = ({ isCurrent }) => {
@@ -30,12 +29,30 @@ const Header = () => {
 
   return (
     <>
+      <h5
+        onClick={toggleHamburger}
+        toggled={isOpen} toggle={setOpen}
+        className="nav-button-open text-braille text-secondary">
+        &#73;&#224;&#234;&#111;&#36;
+      </h5>
       <div className="header-nav">
         <nav className="nav">
           <div>
             <ul className="list-unstyled navbar-nav">
+              <h5 className="text-braille text-white-50">&#36;&#54;&#76;&#45;&#82;&#113;</h5>
+              <li className="nav-item pb-5">
+                <ExactNavLink
+                  onClick={toggleHamburger}
+                  to="/archives/vno_sito"
+                >
+                  vn0 _ sit0
+                </ExactNavLink>
+              </li>
+
+              <h5 className="text-braille text-white-50">&#114;&#110;&#234;&#44;&#90;</h5>
               <li className="nav-item">
                 <ExactNavLink 
+                  onClick={toggleHamburger}
                   to="/works/vnospinari0"
                 >
                   _vnospinari0
@@ -43,6 +60,7 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <ExactNavLink
+                  onClick={toggleHamburger}
                   // to="/works/vnente"
                   to="/works/void"
                 >
@@ -51,28 +69,23 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <ExactNavLink
+                  onClick={toggleHamburger}
                   // to="/works/vnimene"
                   to="/works/void"
                 >
                   _vnimene
                 </ExactNavLink>
               </li>
-              <li className="nav-item pt-5">
-                <ExactNavLink
-                  to="/archives/vno_sito"
-                >
-                  vn0 _ sit0
-                </ExactNavLink>
-              </li>
             </ul>
           </div>
         </nav>
-      </div>
-      <div
-          className="hamburger"
-          onClick={toggleHamburger}
-        >
-          <Hamburger toggled={isOpen} toggle={setOpen} />
+        <h5 className="nav-button-top text-braille text-white-50">
+          <Link
+            onClick={toggleHamburger}
+            to="/">
+            &#68;&#76;&#84;&#89;&#97;
+          </Link>
+        </h5>
       </div>
       
       <style jsx="true">{`
@@ -80,17 +93,21 @@ const Header = () => {
           position: fixed;
           display: ${isOpen ? 'inline' : 'none'};
           background-color: rgba(0,0,0,0.7);
+          backdrop-filter: blur(2px);
           height: 100%;
           width: 100vw;
           z-index: 100;
         }
 
-        .hamburger {
+        .nav-button-open {
+          display: ${isOpen ? 'none' : 'inline'};
           position: fixed;
-          padding-top: 10px;
-          margin-right: 10px;
-          right: 0;
-          z-index: 150;
+          top: 5%;
+          left: 50%;
+          transform: translateX(-50%);
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          cursor: pointer;
         }
       `}
       </style>
