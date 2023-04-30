@@ -74,10 +74,12 @@ a.nav-link {
 
 .color-title {
   color: var(--tx-color-title);
+  mix-blend-mode: screen;
 }
 
 .color-text {
   color: var(--tx-color-primary);
+  mix-blend-mode: screen;
 }
 
 .text-braille {
