@@ -10,7 +10,7 @@ const Page = () => (
       <div className="slide-image">
         <div className="slide-empty-box"></div>
         <StaticImage
-          src="../../images/vn0_sit0.png"
+          src="../../images/vn0_sit0/invite_jp.png"
           quality={95}
           formats={["AUTO", "WEBP"]}
           alt="vn0_sit0"

@@ -10,13 +10,37 @@ const Page = () => (
       <div className="slide-image">
         <div className="slide-empty-box"></div>
         <StaticImage
-        src="../../images/WIDE_COMPOSITION_BW.jpg"
+        src="../../images/vnospinari0/DSC_3696.png"
         quality={95}
         formats={["AUTO", "WEBP"]}
         alt="WIDE_COMPOSITION_BW"
         />
         <StaticImage
-          src="../../images/horizontal_compisition.png"
+          src="../../images/vnospinari0/DSC_4254.png"
+          quality={95}
+          formats={["AUTO", "WEBP"]}
+          alt="horizontal_compisition"
+        />
+        <StaticImage
+          src="../../images/vnospinari0/DSC_4332.png"
+          quality={95}
+          formats={["AUTO", "WEBP"]}
+          alt="horizontal_compisition"
+        />
+        <StaticImage
+          src="../../images/vnospinari0/flat-2-3d.png"
+          quality={95}
+          formats={["AUTO", "WEBP"]}
+          alt="horizontal_compisition"
+        />
+        <StaticImage
+          src="../../images/vnospinari0/hand_chain_web3.png"
+          quality={95}
+          formats={["AUTO", "WEBP"]}
+          alt="horizontal_compisition"
+        />
+        <StaticImage
+          src="../../images/vnospinari0/collage.png"
           quality={95}
           formats={["AUTO", "WEBP"]}
           alt="horizontal_compisition"
