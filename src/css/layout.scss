@@ -34,15 +34,15 @@ a {
   padding-bottom: 7rem !important;
   overflow-y: scroll!important;
   margin: auto 0!important;
-  -ms-overflow-style: none!important; // hide scroll for  IE(Internet Explorer)・Microsoft Edge
-  scrollbar-width: none!important; // hide scroll for Firefox
+  // -ms-overflow-style: none!important; // hide scroll for  IE(Internet Explorer)・Microsoft Edge
+  // scrollbar-width: none!important; // hide scroll for Firefox
 
   display: flex;
   align-items: center;
 }
 
 .container-fluid::-webkit-scrollbar{ // hide scroll for Google Chrome、Safari
-  display: none!important;
+  // display: none!important;
 }
 
 .nav {
@@ -106,8 +106,8 @@ a.nav-link {
   white-space: nowrap;
   z-index: -10;
   overflow-x: scroll!important;
-  -ms-overflow-style: none!important; // hide scroll for IE(Internet Explorer)・Microsoft Edge
-  scrollbar-width: none!important; // hide scroll for Firefox
+  // -ms-overflow-style: none!important; // hide scroll for IE(Internet Explorer)・Microsoft Edge
+  // scrollbar-width: none!important; // hide scroll for Firefox
 
   .slide-empty-box {
     height: 40vh!important;
@@ -125,7 +125,7 @@ a.nav-link {
 }
 
 .slide-image::-webkit-scrollbar{ // hide scroll for Google Chrome、Safari
-display: none!important;
+// display: none!important;
 }
 
 @media (max-width: 64rem) {
