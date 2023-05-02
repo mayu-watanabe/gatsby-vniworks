@@ -7,7 +7,7 @@ import { Seo } from "../../components/seo"
 const Page = () => (
   <Layout>
     <div className="slide-image-container">
-      <div className="slide-image">
+      <div className="slide-image" id="image-area">
         <div className="slide-empty-box"></div>
         <StaticImage
           src="../../images/void.png"

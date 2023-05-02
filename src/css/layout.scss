@@ -6,7 +6,7 @@ $primary: #c6c6c6;
 :root {
   --bg-primary: #c6c6c6;
   --nav-link-color-active: #ffffff;
-  --tx-color-title: #323232;
+  --tx-color-title: #505050;
   --tx-color-primary: #707070;
   --bs-navbar-brand-color: #ffffff8d;
 }
@@ -18,8 +18,13 @@ body {
   line-height: 0.9rem;
 }
 
+p {
+  font-size: 10px;
+}
+
 a {
   text-decoration: none!important;
+  color: var(--bs-navbar-brand-color);
 }
 
 .container-parent {
@@ -61,11 +66,14 @@ a.nav-link {
 
 .nav-button-top {
   position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
+  bottom: 3rem;
+  right: 3rem;
+  text-align: right!important;
+
+  .email {
+    margin-bottom: 0.5rem;
+    padding: 0;
+  }
 }
 
 .navbar-nav .nav-link.active {
@@ -84,6 +92,7 @@ a.nav-link {
 
 .text-braille {
   font-family: 'Braille Normal';
+  font-size: 0.7rem;
 }
 
 .text-braille a {
@@ -91,11 +100,10 @@ a.nav-link {
 }
 
 .nav {
-  padding: 5rem;
+  padding: 3rem;
 }
 
 .slide-image {
-  height: 40vh!important;
   position: fixed;
   left: 0;
   top: 50%;
@@ -125,7 +133,7 @@ a.nav-link {
 }
 
 .slide-image::-webkit-scrollbar{ // hide scroll for Google Chrome、Safari
-display: none!important;
+  display: none!important;
 }
 
 @media (max-width: 64rem) {

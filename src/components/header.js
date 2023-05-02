@@ -31,7 +31,6 @@ const Header = () => {
     <>
       <h5
         onClick={toggleHamburger}
-        toggled={isOpen} toggle={setOpen}
         className="nav-button-open text-braille text-secondary">
         &#73;&#224;&#234;&#111;&#36;
       </h5>
@@ -79,10 +78,12 @@ const Header = () => {
             </ul>
           </div>
         </nav>
-        <h5 className="nav-button-top text-braille text-white-50">
+        <h5 className="nav-button-top text-white-50">
+          <p className="email">almrt@vni.works</p>
           <Link
             onClick={toggleHamburger}
-            to="/">
+            to="/"
+            className="text-braille text-white-50">
             &#68;&#76;&#84;&#89;&#97;
           </Link>
         </h5>
@@ -102,11 +103,8 @@ const Header = () => {
         .nav-button-open {
           display: ${isOpen ? 'none' : 'inline'};
           position: fixed;
-          top: 5%;
-          left: 50%;
-          transform: translateX(-50%);
-          -webkit-transform: translateX(-50%);
-          -ms-transform: translateX(-50%);
+          top: 3rem;
+          right: 3rem;
           cursor: pointer;
           z-index: 100;
         }
