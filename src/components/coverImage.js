@@ -1,8 +1,10 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import { useLocation } from "@reach/router"
 
 const CoverImage = () => {
-  const isActive = (window.location.pathname == '/') 
+  const location = useLocation()
+  const isActive = (location.pathname == '/') 
   return (
     <>
       <div className={`cover-image ${isActive ? "active" : ""}`}>
