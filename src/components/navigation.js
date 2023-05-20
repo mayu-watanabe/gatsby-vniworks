@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import { useLocation } from "@reach/router"
 
 const isActive = ({ isCurrent }) => {
   return isCurrent ? { className: "nav-link active" } : {className: "nav-link non-active"}
@@ -9,7 +10,8 @@ const ExactNavLink = props => (
   <Link getProps={isActive} {...props} />
 )
 
-const Navigation = ({props}) => {
+const Navigation = ({ props }) => {
+  const location = useLocation()
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -26,7 +28,7 @@ const Navigation = ({props}) => {
     setOpen(!isOpen)
   }
 
-  const isIndex = (window.location.pathname == '/')
+  const isIndex = (location.pathname == '/')
 
   return (
     <>

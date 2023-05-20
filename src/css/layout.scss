@@ -20,6 +20,7 @@ body {
 
 p {
   font-size: 10px;
+  white-space: nowrap!important;
 }
 
 a {
@@ -33,7 +34,6 @@ a {
 }
 
 .container-fluid {
-  width: 30vw!important;
   min-height: 90vh;
   height: 90vh;
   overflow-y: scroll!important;
@@ -44,7 +44,6 @@ a {
 
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .container-fluid::-webkit-scrollbar{ // hide scroll for Google Chrome、Safari
@@ -84,30 +83,26 @@ a.nav-link, a.nav-link:hover {
 
   .page-title {
 
-    // .text:after {
-    //   content: '';
-    //   display: inline-block;
-    //   width: 20vw;
-    //   height: 0.5px;
-    //   background-color: var(--tx-color-title);
-    //   vertical-align: middle;
-    //   margin-left: 5%;
-    //   position: absolute;
-    //   top: 50%;
-    //   left: 0%;
-    //   transform: translateY(-50%);
-    // }
+    .text:after {
+      content: '';
+      display: inline-block;
+      width: 20vw;
+      height: 0.5px;
+      background-color: var(--tx-color-title);
+      vertical-align: middle;
+      margin-left: 1%;
+    }
   }
 }
 
 .color-title {
   color: var(--tx-color-title);
-  mix-blend-mode: screen;
+  // mix-blend-mode: screen;
 }
 
 .color-text {
   color: var(--tx-color-primary);
-  mix-blend-mode: screen;
+  // mix-blend-mode: screen;
 }
 
 .text-braille {
@@ -140,7 +135,8 @@ a.nav-link, a.nav-link:hover {
   -ms-transform: translateY(-50%);
   display: inline-block;
   white-space: nowrap;
-  z-index: -10;
+  width: 100%!important;
+  z-index: 10;
   overflow-x: scroll!important;
   -ms-overflow-style: none!important; // hide scroll for IE(Internet Explorer)・Microsoft Edge
   scrollbar-width: none!important; // hide scroll for Firefox
@@ -149,6 +145,15 @@ a.nav-link, a.nav-link:hover {
     height: 40vh!important;
     width: 30vw!important;
     display: inline-block;
+  }
+
+  .image:nth-child(4) {
+    padding-right: 25vw!important;
+  }
+
+  .image-main img{
+    padding: 0 25vw!important;
+    margin: auto!important;
   }
 
   img {
