@@ -36,7 +36,7 @@ const Page = () => (
       </div>
     </div>
 
-    <div className="color-text py-5">
+    <div className="color-text">
       <p className="color-title">[ _vnimene ]</p>
       <p className="my-0">a membrane describing the first need for the daily ritual contact with one’s skin</p>
       <p className="my-0">the organic details embody a condition of liquid, hidden, intimate</p>

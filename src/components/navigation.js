@@ -2,15 +2,14 @@ import React, { useState } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
 const isActive = ({ isCurrent }) => {
-  return isCurrent ? { className: "nav-link active" } : {className: "nav-link"}
+  return isCurrent ? { className: "nav-link active" } : {className: "nav-link non-active"}
 }
 
 const ExactNavLink = props => (
-  // <Link getProps={isActive} {...props} />
-  <Link {...props} />
+  <Link getProps={isActive} {...props} />
 )
 
-const Header = () => {
+const Navigation = ({props}) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -27,31 +26,29 @@ const Header = () => {
     setOpen(!isOpen)
   }
 
+  const isIndex = (window.location.pathname == '/')
+
   return (
     <>
-      <h5
-        onClick={toggleHamburger}
-        className="nav-button-open text-braille text-secondary">
-        &#73;&#224;&#234;&#111;&#36;
-      </h5>
+      <h6
+        className="nav-button-top text-secondary text-top"
+        onClick={toggleHamburger}>
+        vnin_izi0
+      </h6>
       <div className="header-nav">
         <nav className="nav">
           <div>
             <ul className="list-unstyled navbar-nav">
-              <h5 className="text-braille text-white-50">&#36;&#54;&#76;&#45;&#82;&#113;</h5>
-              <li className="nav-item pb-5">
+              <li className="nav-item pb-4">
                 <ExactNavLink
-                  onClick={toggleHamburger}
                   to="/archives/vno_sito"
                 >
                   vn0 _ sit0
                 </ExactNavLink>
               </li>
 
-              <h5 className="text-braille text-white-50">&#114;&#110;&#234;&#44;&#90;</h5>
               <li className="nav-item">
                 <ExactNavLink 
-                  onClick={toggleHamburger}
                   to="/works/vnospinari0"
                 >
                   _vnospinari0
@@ -59,18 +56,15 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <ExactNavLink
-                  onClick={toggleHamburger}
                   // to="/works/vnente"
                   to="/works/void"
                 >
                   _vnente
                 </ExactNavLink>
               </li>
-              <li className="nav-item">
+              <li className="nav-item test">
                 <ExactNavLink
-                  onClick={toggleHamburger}
                   // to="/works/vnimene"
-                  to="/works/void"
                 >
                   _vnimene
                 </ExactNavLink>
@@ -78,36 +72,43 @@ const Header = () => {
             </ul>
           </div>
         </nav>
-        <h5 className="nav-button-top text-white-50">
-          <p className="email">almrt@vni.works</p>
+        <h6 className="nav-button-bottom text-secondary">
+          <p className="email pb-4">almrt@vni.works</p>
           <Link
-            onClick={toggleHamburger}
             to="/"
-            className="text-braille text-white-50">
-            &#68;&#76;&#84;&#89;&#97;
+            className="text-secondary text-top">
+            vnin_izi0
           </Link>
-        </h5>
+        </h6>
       </div>
       
       <style jsx="true">{`
-        .header-nav {
-          position: fixed;
+        .navbar-nav .nav-link.non-active,
+        .test
+        {
+          visibility: ${isOpen ? 'visible' : 'hidden'}!important;
+        }
+
+        .nav-button-top {
+          position: absolute;
           top: 0;
-          display: ${isOpen ? 'inline' : 'none'};
-          background-color: rgba(0,0,0,0.7);
-          backdrop-filter: blur(2px);
-          height: 100%;
-          width: 100vw;
+          right: 3rem;
+          text-align: right!important;
           z-index: 100;
         }
 
-        .nav-button-open {
-          display: ${isOpen ? 'none' : 'inline'};
-          position: fixed;
-          top: 3rem;
+        .nav-button-bottom {
+          position: absolute;
+          bottom: 1rem;
           right: 3rem;
-          cursor: pointer;
+          text-align: right!important;
           z-index: 100;
+          visibility: ${isIndex ? 'hidden' : 'visible'}!important;
+        
+          .email {
+            margin-bottom: 0.5rem;
+            padding: 0;
+          }
         }
       `}
       </style>
@@ -115,4 +116,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Navigation
