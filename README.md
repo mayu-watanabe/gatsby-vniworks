@@ -1,3 +1,21 @@
+## How to start
+
+```shell
+# make sure the node version is using v19.8.1 or newer one.
+nodebrew ls                                           
+# current: v19.8.1
+
+# clone this repository 
+git clone <this repository>
+cd <directory>
+
+# install packages (I had dependency problems so temporarily use '--legacy-peer-deps' until fix these matters)
+npm install --legacy-peer-deps
+
+# start gatsby
+npm run develop
+```
+
 <p align="center">
   <a href="https://www.gatsbyjs.com">
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
