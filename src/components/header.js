@@ -92,6 +92,7 @@ const Header = () => {
       <style jsx="true">{`
         .header-nav {
           position: fixed;
+          top: 0;
           display: ${isOpen ? 'inline' : 'none'};
           background-color: rgba(0,0,0,0.7);
           backdrop-filter: blur(2px);

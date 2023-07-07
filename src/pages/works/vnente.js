@@ -36,7 +36,7 @@ const Page = () => (
       </div>
     </div>
 
-    <div className="color-text py-5">
+    <div className="color-text">
       <p className="color-title">[ _vnente ]</p>
       <p className="my-0">The shaping of an oval form through an empirical / alchemical approach .</p>
       <p className="my-0 pt-4">The experimenting while looking for the minimum balance of the base of the human figure , in movement , has led to the carving out of the negative egg and the subsequent cut of the two halves, relating to the anatomical detail of the arch of the foot .</p>
